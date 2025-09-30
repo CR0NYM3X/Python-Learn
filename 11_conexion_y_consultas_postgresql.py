@@ -2,6 +2,34 @@
 # Tema: Conexión y consultas en PostgreSQL con psycopg2 y asyncpg
 # Descripción: Este script explica cómo instalar bibliotecas, conectarse a PostgreSQL, ejecutar consultas SQL y manejar transacciones, con ejemplos comentados.
 
+'''
+## 🔹 `psycopg2`
+- **Tipo**: Cliente **síncrono** para PostgreSQL.
+- **Uso común**: Aplicaciones tradicionales en Python (scripts, backend con Flask, Django sin async).
+- **Ventajas**:
+  - Muy estable y ampliamente usado.
+  - Compatible con muchas herramientas y frameworks.
+  - Fácil de usar en entornos donde no se necesita concurrencia.
+- **Desventajas**:
+  - Bloquea el hilo de ejecución mientras espera la respuesta del servidor.
+  - No es ideal para aplicaciones que manejan muchas conexiones simultáneas (como APIs de alto rendimiento).
+
+ 
+ 
+
+## 🔹 `asyncpg`
+- **Tipo**: Cliente **asíncrono** para PostgreSQL.
+- **Uso común**: Aplicaciones modernas con **`asyncio`**, como APIs con **FastAPI** o servidores de alto rendimiento.
+- **Ventajas**:
+  - Muy rápido y eficiente.
+  - Permite manejar múltiples conexiones sin bloquear el hilo principal.
+  - Ideal para aplicaciones concurrentes.
+- **Desventajas**:
+  - Requiere entender y usar `async/await`.
+  - No compatible con frameworks que no soportan async.
+'''      
+
+
 # -------------------------------
 # 📌 1. Instalación de bibliotecas
 # -------------------------------
